@@ -13,6 +13,15 @@ export class AppComponent {
 
   name:Promise<string>
 
+  person =[
+    {id:1, name:'abhishek'},
+    {id:2, name:'tillu'},
+    {id:3, name:'gullu'},
+    {id:4, name:'kallu'},
+    {id:5, name:'bhhddj'},
+    {id:6, name:'kakakak'},
+  ]
+
   
 /**
  *

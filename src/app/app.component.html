@@ -1,6 +1,4 @@
-
-
-
+<!-- 
 <div>
     <div *ngIf="name |  async as sms; else elseblock">
         message : {{sms}}
@@ -10,5 +8,10 @@
     <ng-template #elseblock>
         loading.......
     </ng-template>
+
+</div> -->
+
+<div *ngFor="let i of person">
+    {{i.name }} | {{i.id}}
 
 </div>
