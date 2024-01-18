@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import moment from 'moment';
+import { MessageService } from './message.service';
 
 @Component({
   selector: 'app-root',
@@ -9,25 +11,23 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class AppComponent {
   title = 'angular_basics';
 
-  myform:FormGroup
+  name:Promise<string>
+
+  
+/**
+ *
+ */
+constructor(private _messageService:MessageService) {
+  this.name = this._messageService.getmessage()
+
+  
+  
+}
+  
+
+ 
 
 
-
-  constructor(private fb: FormBuilder) {}
-
-  ngOnInit() {
-    this.myform = this.fb.group({
-      username:[''],
-      password:['']
-    })
-   
-  }
-
-  onSubmit(){
-    console.log("submitted");
-    
-
-  }
 
  
  

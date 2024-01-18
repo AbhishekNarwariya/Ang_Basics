@@ -1,12 +1,14 @@
 
 
-<form [formGroup]="myform" (ngSubmit)="onSubmit()">
-    <input type="text" placeholder="enter name" formControlName="username">
-    <input type="text" placeholder="enter password" formControlName="password">
 
-    <button type="submit">Submit</button>
+<div>
+    <div *ngIf="name |  async as sms; else elseblock">
+        message : {{sms}}
+    
+    </div>
+    
+    <ng-template #elseblock>
+        loading.......
+    </ng-template>
 
-</form>
-  
-
-  
+</div>
