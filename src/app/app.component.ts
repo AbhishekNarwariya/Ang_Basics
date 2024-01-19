@@ -1,7 +1,4 @@
-import { Component, HostListener } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import moment from 'moment';
-import { MessageService } from './message.service';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -11,33 +8,48 @@ import { MessageService } from './message.service';
 export class AppComponent {
   title = 'angular_basics';
 
-  name:Promise<string>
 
-  person =[
-    {id:1, name:'abhishek'},
-    {id:2, name:'tillu'},
-    {id:3, name:'gullu'},
-    {id:4, name:'kallu'},
-    {id:5, name:'bhhddj'},
-    {id:6, name:'kakakak'},
-  ]
+  employees = [
+    { name: "John Doe", country: "India" },
+    { name: "Jane Smith", country: "USA" },
+    { name: "Alice Johnson", country: "Canada" },
+    { name: "Bob Wang", country: "China" },
+    { name: "Mohammed Ali", country: "Saudi Arabia" },
+    { name: "Sophie Dubois", country: "France" },
+    { name: "Diego Hernandez", country: "Mexico" }
+  ];
 
-  
-/**
- *
- */
-constructor(private _messageService:MessageService) {
-  this.name = this._messageService.getmessage()
+  getcolor(country: any) {
+    switch (country) {
+      case 'India':
+        return 'violet';
+      case 'USA':
+        return 'indigo';
+      case 'Canada':
+        return 'blue';
+        case 'China':
+        return 'green';
+      case 'Saudi Arabia':
+        return 'yellow';
+      case 'France':
+        return 'orange';
+      case 'Mexico':
+        return 'red';
+      
+    }   
+    return null
+  }
 
-  
-  
+
+
+
 }
-  
-
- 
 
 
 
- 
- 
-}
+
+
+
+
+
+

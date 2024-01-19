@@ -1,17 +1,7 @@
-<!-- 
-<div>
-    <div *ngIf="name |  async as sms; else elseblock">
-        message : {{sms}}
-    
+<h1 >
+    <div *ngFor="let data of employees">
+        <div [ngStyle]="{'background-color': getcolor(data.country)}">
+            employee name : {{data.name}}  | employee country : {{data.country}}
+        </div>
     </div>
-    
-    <ng-template #elseblock>
-        loading.......
-    </ng-template>
-
-</div> -->
-
-<div *ngFor="let i of person">
-    {{i.name }} | {{i.id}}
-
-</div>
+</h1>
